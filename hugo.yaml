@@ -72,17 +72,20 @@ params:
   homeInfoParams:
     Title: "Hi there \U0001F44B"
     Content: >
-      Welcome to my blog, this is a place where I write random ideas that I think are usefull for a CS Major.
+      Welcome to my blog. This is a place where I write random ideas that I think are useful for a CS major.
 
-      - Although my writings are mostly about computer science don't be afraid to them out!
+      - Although my writings are mostly about computer science, don’t be afraid to check them out!
 
-      - You can find all sorts of things ranging from how to make a digital circuit to how to pick a good dinner!
+      - You can find all sorts of things, ranging from how to make a digital circuit to how to pick a good dinner!
 
-      - Don't forget to check out my [github](https://github.com/ereneroglum) for my personal projects.
+      - Don’t forget to check out my [GitHub](https://github.com/ereneroglum) for my personal projects.
 
   socialIcons:
     - name: github
       url: "https://github.com/ereneroglum"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/eren-eroğlu-197593280"
+
 
   analytics:
     # google:
