@@ -92,7 +92,7 @@ verilate(Vhalfadder
 
 After completing everything, we can use `cmake -S . -B build` and `cmake --build build/` to build our verilator output. Use `cd build; ./Vhalfadder; cd ..` to generate waveform, then use `gtkwave build/halfadder_waveform.vcd` to open generated waveform.
 
-Now that we have tested our verilog code, we can move onto the synthesis step. For this purpose we will use yosys. Yosys can read instructions from a file with `-f` flag. An example of yosys instruction file can be as
+Now that we have tested our verilog code, we can move onto the synthesis step. For this purpose we will use yosys. Yosys can read instructions from a file with `-s` flag. An example of yosys instruction file can be as
 
 ```
 # synthesize.ys
