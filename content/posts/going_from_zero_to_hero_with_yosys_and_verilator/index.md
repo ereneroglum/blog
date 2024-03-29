@@ -1,10 +1,10 @@
 ---
 title: 'Going from Zero to Hero with Yosys and Verilator'
 date: 2024-03-28T21:45:48+03:00
-tags: ["yosys", "verilog", "verilator", "logic-design"]
+tags: ["yosys", "verilog", "verilator", "logic design"]
 ---
 
-![Logic Diagram of Half Adder](halfadder_synthesized.svg)
+![Logic Diagram of Half Adder](halfadder_synthesized.svg#center)
 
 ## Introduction
 
@@ -45,7 +45,7 @@ endmodule
 Now that we have a half adder, we need a simple test case to use with Verilator. Following test case we be enough for our neeeds
 
 ```cpp
-/* simulations/sim_vhalfadder.cpp */
+/* simulations/sim_halfadder.cpp */
 
 #include "Vhalfadder.h"
 #include "verilated_vcd_c.h"
@@ -77,7 +77,7 @@ we will use cmake to verilate out verilog modules an example `CMakeLists.txt` ca
 # CMakeLists.txt
 
 cmake_minimum_required(VERSION 3.25)
-project(fulladder)
+project(halfadder)
 
 find_package(verilator
   HINTS $ENV{VERILATOR_ROOT})
