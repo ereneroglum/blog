@@ -1,4 +1,4 @@
-baseURL: /
+baseURL: "https://ereneroglu.net/"
 languageCode: en-us
 title: Eren Eroğlu
 theme: [ "PaperMod" ]
@@ -100,4 +100,3 @@ markup:
     guessSyntax: true
     # lineNos: true
     style: monokai
-
