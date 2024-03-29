@@ -63,7 +63,7 @@ params:
     hiddenInSingle: true
 
   editPost:
-    URL: "https://github.com/ereneroglum/blog/content"
+    URL: "https://github.com/ereneroglum/blog/blob/master/content"
     Text: "Suggest Changes"
     appendFilePath: true
 
