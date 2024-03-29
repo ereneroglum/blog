@@ -112,6 +112,8 @@ params:
     limit: 10
     keys: [ "title", "permalink", "summary", "content" ]
 
+  math: true
+
 menu:
   main:
     - identifier: posts
