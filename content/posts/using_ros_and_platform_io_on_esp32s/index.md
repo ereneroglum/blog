@@ -1,5 +1,5 @@
 ---
-title: 'Using ROS2 and Platform IO on Nucleo H753ZI'
+title: 'Using ROS2 and Platform IO on ESP32'
 date: 2024-11-20T14:17:29+03:00
 tags: ["embeded", "esp32", "ros2", "platformio", "microros", "docker"]
 ---
