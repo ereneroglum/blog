@@ -1,10 +1,11 @@
 ---
-title: 'Simulating Air Gapped Kubernetes with Qemu and Libvirt'
+title: 'Using Harbor as Container Image Cache for Kubernetes'
 date: 2025-01-21T10:55:36+03:00
-tags: [ "kubernetes", "k3s", "libvirt", "qemu" ]
+tags: [ "kubernetes", "k3s", "libvirt", "qemu", "harbor" ]
 ---
 
-We will be simulating an air gapped Kubernetes install with QEMU and Libvirt.
+We will be simulating an Kubernetes install with QEMU and Libvirt and use 
+Harbor to cache container images.
 
 We will have 4 VM's for this job
 
@@ -115,7 +116,29 @@ users:
 ```
 
 For `control-panel`, `worker-1` and `worker-2` replicate the configuration in
-their respective directories.
+their respective directories. In the end you should have the following 
+structure:
+
+```
+kubernetes/
+├── control-panel
+│   ├── control-panel.img
+│   ├── meta-data
+│   └── user-data
+├── harbor
+│   ├── harbor.img
+│   ├── meta-data
+│   └── user-data
+├── kubernetes.xml
+├── worker-1
+│   ├── meta-data
+│   ├── user-data
+│   └── worker-1.img
+└── worker-2
+    ├── meta-data
+    ├── user-data
+    └── worker-2.img
+```
 
 Now use `virt-install` to install the VM's:
 
@@ -213,12 +236,13 @@ file as described in [K3S Documentation](https://docs.k3s.io/installation/privat
 with following contents:
 
 ```bash
-mirrors:
-  docker.io:
-    endpoint:
-      - http://HARBOR-IP
+rules:
+  - name: 'Redirect DockerIO requests'
+    matches:
+      - '^docker.io'
+    replace: 'HARBOR-IP/PROXY_CACHE_PROJECT_NAME'
+    checkUpstream: true
 ```
 
-Restart k3s in your nodes. Now we can use ```ip route del default``` to simulate
-an air gapped setup. You should be able to use kubernetes with Harbor
+Restart k3s in your nodes. You should be able to use kubernetes with Harbor
 container image proxy.
