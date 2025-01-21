@@ -1,5 +1,5 @@
 ---
-title: 'Simulating_air_gapped_kubernetes_with_qemu_and_libvirt'
+title: 'Simulating Air Gapped Kubernetes with Qemu and Libvirt'
 date: 2025-01-21T10:55:36+03:00
 tags: [ "kubernetes", "k3s", "libvirt", "qemu" ]
 ---
