@@ -82,7 +82,7 @@ sudo virsh net-start kubernetes
 Allow all users to access `virbr1`:
 
 ```
-echo "allow virbr1" | sudo tee /etc/qemu/bridge.conf
+echo "allow virbr1" | sudo tee -a /etc/qemu/bridge.conf
 ```
 
 Now create VM images:
