@@ -150,14 +150,14 @@ access we will also add the default network interface that comes with libvirt:
 
 ```bash
 virt-install --name=harbor \
-             --ram=4096 \
+             --ram=2048 \
              --vcpus=2 \
              --import --disk path=harbor/harbor.img,format=qcow2 \
              --network bridge=virbr0,model=virtio \
              --network bridge=virbr1,model=virtio \
              --cloud-init user-data=harbor/user-data,meta-data=harbor/meta-data \
              --os-variant=ubuntu22.04 \
-             --graphics vnc,listen=0.0.0.0 --noautoconsole
+             --noautoconsole
 ```
 
 For other VM's we don't need the default bridge. For example can use following
@@ -165,13 +165,13 @@ for control-panel:
 
 ```bash
 virt-install --name=control-panel \
-             --ram=4096 \
+             --ram=2048 \
              --vcpus=2 \
              --import --disk path=control-panel/control-panel.img,format=qcow2 \
              --network bridge=virbr1,model=virtio \
              --cloud-init user-data=control-panel/user-data,meta-data=control-panel/meta-data \
              --os-variant=ubuntu22.04 \
-             --graphics vnc,listen=0.0.0.0 --noautoconsole
+             --noautoconsole
 ```
 
 ```bash

@@ -144,13 +144,13 @@ Now use `virt-install` to install the VM's:
 
 ```bash
 virt-install --name=harbor \
-             --ram=4096 \
+             --ram=2048 \
              --vcpus=2 \
              --import --disk path=harbor/harbor.img,format=qcow2 \
              --network bridge=virbr1,model=virtio \
              --cloud-init user-data=harbor/user-data,meta-data=harbor/meta-data \
              --os-variant=ubuntu24.04 \
-             --graphics vnc,listen=0.0.0.0 --noautoconsole
+             --noautoconsole
 ```
 
 Other VM's can be started similarly. Use
