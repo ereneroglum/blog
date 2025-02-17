@@ -1,6 +1,5 @@
 baseURL: "https://ereneroglu.net/"
 title: Eren Eroğlu Blog
-paginate: 5
 theme: PaperMod
 
 enableRobotsTXT: true
@@ -141,6 +140,9 @@ markup:
     # guessSyntax: true
     # lineNos: true
     # style: monokai
+
+pagination:
+  pagerSize: 5
 
 outputs:
   home:
