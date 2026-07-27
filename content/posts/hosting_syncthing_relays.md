@@ -16,7 +16,7 @@ Syncthing at bare minimum needs to discover the IP addresses of peers. If two
 peers are in the same broadcast domain, syncthing can discover peers using local
 discovery methods. But if peers are in different broadcast domains, they are
 discovered using global discovery methods. This depend on the community hosted
-[discovery servers])(https://docs.syncthing.net/users/stdiscosrv.html). Upon
+[discovery servers](https://docs.syncthing.net/users/stdiscosrv.html). Upon
 discovering their IP addresses, peers try to connect directly. If not this is
 where you have to abandon all hope.
 
